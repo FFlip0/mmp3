@@ -1,0 +1,34 @@
+{
+  "name": "player",
+  "author": "flip",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^28.1.2",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.flip.player",
+    "productName": "player",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
